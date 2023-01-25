@@ -4,3 +4,13 @@
   object-fit: cover;
   object-position: bottom;
 }
+
+.navbar {
+  background-color: #ea899e;
+}
+
+.btn{
+  text-align: right !important;
+  background-color: black !important;
+}
+
