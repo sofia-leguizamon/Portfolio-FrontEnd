@@ -14,4 +14,12 @@
   background-color: black !important;
 }
  
-
+.fondo {
+  position: relative;
+  top: 100px ;
+  padding: 10px; 
+  margin: 10px; 
+  border: 2px solid black; 
+  float: center; 
+  
+}
