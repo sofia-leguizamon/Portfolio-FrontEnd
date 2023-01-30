@@ -16,10 +16,16 @@
  
 .fondo {
   position: relative;
-  top: 100px ;
+  top: 80px ; /*altura desde arriba*/
   padding: 10px; 
-  margin: 10px; 
+  margin: 2 0px; 
   border: 2px solid black; 
   float: center; 
   
+}
+
+body {
+  heigh:665px;
+  background-image: url("img/Sin\ título.png");
+  background-size: 4rem; /* tamaño de imagen*/
 }
