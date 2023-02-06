@@ -23,12 +23,12 @@
   float: center; 
   
 }
-/*
+
 body {
   height:665px;
   background-image: url("img/Sin\ título.png");
   background-size: 4rem; /* tamaño de imagen*/
-
+}
 
 .ventana-2{
   background-image: url("img/FotoPortfolio.png");
@@ -43,66 +43,107 @@ body {
   min-height: 80vh;
 }
 
-$size: 80px;
-$speed: 3s;
-$peakopacity:0.7;
-
-
-
-
-.body {
-  background-color:#e25454;
-  .arrows {
-    position: relative;
-    /**/
-    position: absolute;
-    top:50%;
-    left:50%;
-    /**/
-    width:$size;
-    height:$size;
-    transform:translate(-50%,-50%);
-    &:before {
-      content: '';
-      position: absolute;
-      width:100%;
-      height:100%;
-      border-left:$size/3 solid rgba(0,0,0,$peakopacity);
-      border-bottom:$size/3 solid rgba(0,0,0,$peakopacity);
-      transform:translate($size/3,$size*4/3)rotate(-45deg);
-      animation: arrows $speed linear infinite;
-    }
-    &:after {
-      content: '';
-      position: absolute;
-      width:100%;
-      height:100%;
-      border-left:$size/3 solid rgba(0,0,0,$peakopacity);
-      border-bottom:$size/3 solid rgba(0,0,0,$peakopacity);
-      transform:translate($size*2/3,0px)rotate(-45deg) ;
-      animation: arrows $speed linear infinite $speed/-2;
-    }
-  }
+.p {
+  font-size: 1.4rem;
+  color: rgb(0, 0, 0);
+  font-family: 'Times New Roman', Times, serif;
 }
 
-@keyframes arrows {
-  0% {
-      border-left:$size/3 solid rgba(0,0,0,0);
-      border-bottom:$size/3 solid rgba(0,0,0,0);
-      transform:translate($size/-6,$size*4/-6)rotate(-45deg) ;
-  }
-  10%, 90% {
-      border-left:$size/3 solid rgba(0,0,0,0);
-      border-bottom:$size/3 solid rgba(0,0,0,0);
-  }
-  50% {
-      border-left:$size/3 solid rgba(0,0,0,$peakopacity);
-      border-bottom:$size/3 solid rgba(0,0,0,$peakopacity);
-      transform:translate($size/-6,0px)rotate(-45deg) ;
-  }
-  100% {
-      border-left:$size/3 solid rgba(0,0,0,0);
-      border-bottom:$size/3 solid rgba(0,0,0,0);
-      transform:translate($size/-6,$size*4/6)rotate(-45deg) ;
-  }
+.h1 {
+  
+  color: rgb(0, 0, 0);
+  font-family: 'Times New Roman', Times, serif;
 }
+
+.h2 {
+
+  color: rgb(0, 0, 0);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.container-bar{
+	width: 100%;
+	max-width: 50px;
+	position: fixed;
+	left: 0;
+	top: 25%;
+}
+.container-bar a{
+	display: block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+	position: relative;
+	transition: all 500ms ease;
+	color: #fff;
+}
+.container-bar a:hover{
+	background: #1c1c1c;
+}
+.container-bar .fa-linkedin{
+	background: #3b5998;
+	border-radius: 0px 5px 0px 0px;
+}
+.container-bar .fa-google{
+	background: #e52a23;
+}
+.container-bar .fa-github{
+	background: #747473;
+}
+.container-bar #title{
+	position: absolute;
+	background: #1c1c1c;
+	padding: 0px 8px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 3px;
+	font-size: 15px;
+	top:12px; left: 0px;
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+}
+.container-bar a:hover #title{
+	opacity: 1;
+	visibility: visible;
+	left: 64px;
+}
+.container-bar #title:after{
+	position: absolute;
+	content: '';
+	border-left: 7px solid transparent;
+	border-right: 6px solid #1c1c1c;
+	border-top: 7px solid transparent;
+	border-bottom: 7px solid transparent;
+	right: 100%;
+	top: 8px;
+}
+#btn-social{
+	display: none;
+}
+.fa-play{
+	cursor: pointer;
+	transition: all 0.4s;
+	font-size: 12px;
+	margin-bottom: 5px;
+	display: inline-block;
+	transform: rotate(180deg);
+	color: #49b0e6;
+}
+#btn-social:checked ~ .fa-play{
+	transform: rotate(0deg);
+}
+.icon-social{
+	transition: all 0.4s;
+	transform: translateX(0%);
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+}
+#btn-social:checked ~ .icon-social{
+	transform: translateX(-100%);
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.0);
+}  /* hasta aca es la barra de contacto*/
