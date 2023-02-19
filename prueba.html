@@ -32,42 +32,45 @@
         </div>
       </div>
 
-      <script>
-        function cambiar_parrafo(){
-          document.getElementById("edit-acercade").style.display="block";
-          let texto = document.getElementById("text-acercade").innerText;
-          console.log(texto);
-        };
-        function cambiar_texto(valor){
-          document.getElementById("text-acercade").innerText=valor;
-        }
-      </script>
+     
     
-    <!--
-    <div align="center">  imagen del centro
-      <img src="img/1.png" class="img-fluid fondo" alt="Responsive image">
-    </div> -->
   <body>
     <div class="container" >
       <div class="row gy-5">
         <div class="col-12 col-md-6 col-xl-6 bg-white at-6 ventana-1 opacity-25 ventana-2" ><img src="img/FotoPortfolio.png" class="foto" >
         </div>
 
-        <div class="col-12 col-md-6 col-xl-6 bg-success at-6 ventana-1">
-          
+    <div class="col-12 col-md-6 col-xl-6 bg-success at-6 ventana-1">
+          <div class="card mat-card">
+            <div class="card-titles">
           <h1 align="center" style="margin-top: 20px;">Leguizamon Sofia Violeta &nbsp;</h1>
+          
           <div class="btn-edit" onclick="cambiar_parrafo()">
             <a href="#" class="btn-right">
               <i class="fa fa-pen"></i>
             </a>
           </div>
+
+        </div>
+        </div>
+        <div>
           <p id="text-acercade" align="center">&nbsp; Hola! mi nombre es Sofía, soy una entusiasta de la programación, en continuo desarrollo para ampliar mis conocimientos en este ámbito, para así lograr hacer el mejor trabajo posible.
             Tengo un profundo sentido de la responsabilidad y organización, especialmente para el trabajo en conjunto con otras personas, eso me mantiene dando lo mejor de mi para aportar las optimas soluciones en las problemáticas a afrontar, además de un ambiente saludable donde poder trabajar de manera satisfactoria, realizando intercambios de ideas y aportando a mis compañeros ayuda a las dificultades presentes.
-          </p>
-          <div>
+          </p></div>
+        <div>
             <input id="edit-acercade" type="text" oninput="cambiar_texto(this.value)" style="display: none">
-          </div>
         </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
 
         <div class="col-12 col-md-6 col-xl-6 bg-white at-6 opacity-25 ventana-1" ><h2 align="center" style="margin-top: 20px;"> E X P E R I E N C I A</h2>
           <p align="center">&nbsp; Hola! mi nombre es Sofía, soy una entusiasta de la programación, en continuo desarrollo para ampliar mis conocimientos en este ámbito, para así lograr hacer el mejor trabajo posible.
@@ -144,6 +147,33 @@
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="script.js"></script>
+
+        <script>
+            function cambiar_parrafo(){
+              document.getElementById("edit-acercade").style.display="block";
+              let texto = document.getElementById("text-acercade").innerText;
+              console.log(texto);
+            };
+            function cambiar_texto(valor){
+              document.getElementById("text-acercade").innerText=valor;
+            };
+    
+            function logMessage(message){
+                console.log(message+"<br>");
+            }
+    
+            //controla si se presiono enter 
+            let textarea=document.getElementById("edit-acercade")
+            textarea.addEventListener('keyup', (e) => {
+                logMessage('Key "${e.key}" released [event: keyup]');
+                if (e.key=="Enter"){
+                    document.getElementById("edit-acercade").style.display="none"
+                }
+            });
+    
+            
+        
+          </script>
 
   </body>
 </html>
